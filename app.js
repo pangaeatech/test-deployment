@@ -1,3 +1,5 @@
+import smcat from "state-machine-cat";
+
 async function displayQuote() {
   let quote;
 
@@ -19,7 +21,7 @@ async function displayQuote() {
 
   // Update text
   const div = document.getElementById('quote');
-  div.textContent = quote.text;
+  div.innerHTML = smcat.render("initial            => \"media player off\";");
 }
 
 displayQuote();
